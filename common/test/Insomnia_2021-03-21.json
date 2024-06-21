@@ -1,0 +1,305 @@
+{
+    "_type": "export",
+    "__export_format": 4,
+    "__export_date": "2021-03-22T02:36:42.923Z",
+    "__export_source": "insomnia.desktop.app:v2020.5.2",
+    "resources": [
+        {
+            "_id": "req_fe3d705b0d4447ec99cd177cbae860b2",
+            "parentId": "fld_8994a9844ee54e8a86c63bc8e7b70b9a",
+            "modified": 1616374156125,
+            "created": 1616280423577,
+            "url": "http://localhost:5000/api/bancos2",
+            "name": "tweetsGET",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [],
+            "authentication": {},
+            "metaSortKey": -1616280423577,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "fld_8994a9844ee54e8a86c63bc8e7b70b9a",
+            "parentId": "wrk_44b6f10607604604b690187db44d796e",
+            "modified": 1616280392605,
+            "created": 1616280392605,
+            "name": "baseAPI",
+            "description": "",
+            "environment": {},
+            "environmentPropertyOrder": null,
+            "metaSortKey": -1616280392606,
+            "_type": "request_group"
+        },
+        {
+            "_id": "wrk_44b6f10607604604b690187db44d796e",
+            "parentId": null,
+            "modified": 1598036597265,
+            "created": 1598036597265,
+            "name": "Insomnia",
+            "description": "",
+            "scope": null,
+            "_type": "workspace"
+        },
+        {
+            "_id": "req_e57b6f24b9d0411fa31b5ffcf2806894",
+            "parentId": "fld_8994a9844ee54e8a86c63bc8e7b70b9a",
+            "modified": 1616377619231,
+            "created": 1616377614766,
+            "url": "http://localhost:5000/api/bancos2/2000",
+            "name": "tweetsGETseek",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [],
+            "authentication": {},
+            "metaSortKey": -1614155150986.4297,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_8cca292463e54423a925a5fba581ddce",
+            "parentId": "fld_8994a9844ee54e8a86c63bc8e7b70b9a",
+            "modified": 1616378467078,
+            "created": 1616378345661,
+            "url": "http://localhost:5000/api/bancos2/page",
+            "name": "tweetsGETpage",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [
+                {
+                    "name": "filter",
+                    "value": "id>10",
+                    "description": "",
+                    "id": "pair_0fd6763c93be49df8e135891f1d46ed1"
+                },
+                {
+                    "name": "page",
+                    "value": "3",
+                    "description": "",
+                    "id": "pair_59552f2bad1c4548a100a858e18403ac"
+                },
+                {
+                    "name": "size",
+                    "value": "5",
+                    "description": "",
+                    "id": "pair_757e4bdd55af43fbbe93d559158741d0"
+                }
+            ],
+            "headers": [],
+            "authentication": {},
+            "metaSortKey": -1613092514691.1445,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_d17d28a067054dd9bab9f54a39437bbc",
+            "parentId": "fld_8994a9844ee54e8a86c63bc8e7b70b9a",
+            "modified": 1616374150361,
+            "created": 1616374150361,
+            "url": "http://localhost:5000/api/bancos2/types",
+            "name": "tweetsGETtypes",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [],
+            "authentication": {},
+            "metaSortKey": -1612029878395.8594,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_094fd37337994e02866f1e752fea3943",
+            "parentId": "fld_8994a9844ee54e8a86c63bc8e7b70b9a",
+            "modified": 1616373541220,
+            "created": 1616353996853,
+            "url": "http://localhost:5000/api/bancos2",
+            "name": "tweetsPOST",
+            "description": "",
+            "method": "POST",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n    \"id\": 2000,\n    \"co_banco\": \"444\",\n    \"no_bancos\": \"teste444 de inclusão !!!\",\n    \"no_site\": \"www.teste444.com.br\"\n}\n\n"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "id": "pair_0c8340eb3fc545228ae1895c7043f2cf"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1607779333214.7188,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_420c7b35cbf44fb3aeddb725dacb81e2",
+            "parentId": "fld_8994a9844ee54e8a86c63bc8e7b70b9a",
+            "modified": 1616377945770,
+            "created": 1616377490351,
+            "url": "http://localhost:5000/api/bancos2/2000",
+            "name": "tweetsPUT",
+            "description": "",
+            "method": "PUT",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n    \"co_banco\": \"000\",\n    \"no_bancos\": \"TESTE DE ALTERAÇÃO - OK\",\n    \"no_site\": \"www.teste00000444.com.br\"\n}\n"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "id": "pair_0c8340eb3fc545228ae1895c7043f2cf"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1603528788033.5781,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_200eb0a1183e4eeca3e3aaa1cd1c2bfb",
+            "parentId": "fld_8994a9844ee54e8a86c63bc8e7b70b9a",
+            "modified": 1616380128917,
+            "created": 1616380101326,
+            "url": "http://localhost:5000/api/bancos2/2000",
+            "name": "tweetsDELETE",
+            "description": "",
+            "method": "DELETE",
+            "body": {
+                "mimeType": "application/json",
+                "text": ""
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "id": "pair_0c8340eb3fc545228ae1895c7043f2cf"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1601403515443.0078,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "env_17135adf8446cd03a4f8ef0b25137793edd87366",
+            "parentId": "wrk_44b6f10607604604b690187db44d796e",
+            "modified": 1608298037042,
+            "created": 1598036597630,
+            "name": "Base Environment",
+            "data": {},
+            "dataPropertyOrder": {},
+            "color": null,
+            "isPrivate": false,
+            "metaSortKey": 1598036597630,
+            "_type": "environment"
+        },
+        {
+            "_id": "jar_17135adf8446cd03a4f8ef0b25137793edd87366",
+            "parentId": "wrk_44b6f10607604604b690187db44d796e",
+            "modified": 1605787259080,
+            "created": 1598036597635,
+            "name": "Default Jar",
+            "cookies": [
+                {
+                    "creation": "2020-10-20T16:46:33.222Z",
+                    "domain": "api.easydocs.com.br",
+                    "hostOnly": true,
+                    "httpOnly": true,
+                    "id": "5020230257590521",
+                    "key": "JSESSIONID",
+                    "lastAccessed": "2020-10-20T16:46:33.222Z",
+                    "path": "/",
+                    "value": "A6426B79606854F9394810A015D032E3"
+                },
+                {
+                    "creation": "2020-11-03T12:27:22.957Z",
+                    "domain": "qa1orionbr.cevalogistics.com",
+                    "expires": "2020-11-19T12:01:13.000Z",
+                    "hostOnly": true,
+                    "id": "7666677122356791",
+                    "key": "NSC_ESNS",
+                    "lastAccessed": "2020-11-19T12:00:59.079Z",
+                    "path": "/",
+                    "value": "0305c38b-5fdf-1fb6-9678-00e0ed9efd63_1874952394_3054095360_00000000004345646376"
+                }
+            ],
+            "_type": "cookie_jar"
+        },
+        {
+            "_id": "spc_49398cf005f1482bbc76e6b3d9e389f1",
+            "parentId": "wrk_44b6f10607604604b690187db44d796e",
+            "modified": 1598036597268,
+            "created": 1598036597268,
+            "fileName": "Insomnia",
+            "contents": "",
+            "contentType": "yaml",
+            "_type": "api_spec"
+        },
+        {
+            "_id": "env_60bbb08ee9a54f9083a4b201085eb064",
+            "parentId": "env_17135adf8446cd03a4f8ef0b25137793edd87366",
+            "modified": 1608298569072,
+            "created": 1608298548652,
+            "name": "Developer",
+            "data": {},
+            "dataPropertyOrder": {},
+            "color": null,
+            "isPrivate": false,
+            "metaSortKey": 1608298548652,
+            "_type": "environment"
+        }
+    ]
+}

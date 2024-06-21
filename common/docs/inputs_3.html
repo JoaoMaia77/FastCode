@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+
+    <title>Runtracker - Inputs</title>
+  </head>
+  <body>
+
+    <header>
+      <div class="container-fluid "  style="position: absolute; top: 0;width: 100%; height: 50px; background-color: #e3f2fd;">
+        
+      </div>
+    </header>>  
+
+    <main>
+
+      <div class="container">
+        <div class="jumbotron pb-2 pt-2" style="margin-top: 2rem;">
+          <h1 style="text-align: center;">Cadastro de Bancos</h1>
+          
+          <div class="row">
+            <div class="col-md-6">
+                <label for="pesquisa" class="col-md-12 col-form-label text-md-left">Nome do banco:</label>
+                <input type="text" class="form-control" style="text-align: left;" id="pesquisa" value="">
+            </div>                
+          </div>
+
+          <div class="row"></div>
+
+          <div class="row mt-4">
+            <div class="col-md-2">
+              <button type="button" class="btn btn-outline-info btn-lg btn-block" id="btn_seek">Pesquisar</button>
+            </div>
+
+            <div class="col-md-2">
+              <button type="button" class="btn btn-outline-primary btn-lg btn-block " id="btn_novo">Novo</button>
+            </div>
+
+            <div class="col-md-2">
+              <button type="button" class="btn btn-outline-secondary btn-lg btn-block" id="btn_sair" >Sair</button>
+            </div>
+
+          </div>
+
+          
+        </div>    
+      </div>
+
+      <div class="container" id="div_tabela" style = "display:none">
+        <table class="table table-sm table-hover table-dark">
+            <thead>
+              <tr id="head_table">
+              </tr>
+            </thead>
+            <tbody id='body_table'>              
+                  <tr id="lines_table">
+                  </tr>
+            </tbody>
+          </table>
+      </div>
+
+      <div class="container mb-2" id="div_tela" style = "display:none">
+
+      <div class="row">
+        <div class="col-md-12">
+          <h5 id="text_acao_tela" style="text-align: center">Inclusão</h5>          
+        </div>
+      </div>
+
+      <div id="div_tela_campos">
+
+        <div class="row">
+          <div class="col-md-3">
+            <label for="Tela_id" class="col-md-12 col-form-label text-md-left py-0">Id.</label>
+            <input type="text" readonly class="form-control" style="text-align: right" id="Tela_id" value="">
+          </div>
+        </div> 
+  
+        <div class="row">
+          <div class="col-md-4">
+            <label for="Tela_codigo" class="col-md-12 col-form-label text-md-left py-0">Codigo.</label>
+            <input type="text" readonly class="form-control" style="text-align: right" id="Tela_codigo" value="">
+          </div>
+        </div> 
+  
+        <div class="row">
+          <div class="col-md-10">
+            <label for="Tela_nome" class="col-md-12 col-form-label text-md-left py-0">Nome.</label>
+            <input type="text" readonly class="form-control" style="text-align: right" id="Tela_nome" value="">
+          </div>
+        </div> 
+  
+        <div class="row">
+          <div class="col-md-8">
+            <label for="Tela_site" class="col-md-12 col-form-label text-md-left py-0">Site.</label>
+            <input type="text" readonly class="form-control" style="text-align: right" id="Tela_site" value="">
+          </div>
+        </div> 
+  
+      </div>
+
+      <div class="row mt-2">
+          <div class="col-md-2">
+            <button type="button" class="btn btn-outline-success btn-lg btn-block" id="btn_save">Gravar</button>
+          </div>
+          <div class="col-md-2">
+            <button type="button" class="btn btn-outline-danger btn-lg btn-block " id="btn_tela_cancel">Cancelar</button>
+          </div>
+       </div>
+
+    </div>
+
+
+    </main>
+
+    <footer>
+      <div class="container-fluid"  style="width: 100%; height: 50px; background-color: #e3f2fd;">
+        <p class="text-center text-muted pt-2 mt-0">© Copyright 2021 Runtracker Sistemas. All rights reserved</p>
+      </div>
+    </footer>
+
+    <!-- Funções internas -->
+    <script type="text/javascript" src="input.js"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

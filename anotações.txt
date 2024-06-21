@@ -1,0 +1,20 @@
+-- Tipos no PG
+SELECT oid, typname FROM pg_type
+
+
+-- Datas e Times
+https://momentjs.com/
+
+-- HTML Icons
+https://icons.getbootstrap.com/#icons
+
+
+-- gerar ENTIDADE
+node .\fastCode\codeGenerators\entityModel.js --table tweets --schema public --unit Tweets --save --no-show
+ou 
+gen.bat --table tweets --schema public --unit Tweets --save --no-show
+
+-- Pendências (21/06/2024)
+* Testar a existencia da entidade no banco.
+
+-- GIT Atualizado.

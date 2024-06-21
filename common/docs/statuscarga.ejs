@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body class="container">
+    <%- include('../partials/msg'); %>
+
+    <header>
+        <%- include('../partials/header'); %>
+    </header>
+    <!-- statuscarga -->
+    <main>
+        <div class="jumbotron">
+
+            <div class="row">
+                <div class="col-md-1">
+                    <a href="javascript:history.back();javascript:history.back()"><<<</a>
+                </div>
+                <div class="col-md-9">
+                    <h1>Status da Carga</h1>
+                    <h5><%= empresa %></h5>
+                </div>
+                <div class="col-md-2">
+                    <label for="conhecimento" class="col-md-2 col-form-label text-md-right">Conhecimento</label>
+                    <a href='/posicaocargalotecrtc?&cod_ctrc=<%= conhecimento  %>'>
+                        <input type="button" class="btn btn-block btn-primary" id="conhecimento" value="<%= conhecimento %>">
+                    </a>
+                </div>                
+            </div>
+
+            <!-- STATUS -->
+            <hr style="margin-top: 0; margin-bottom: 0;">
+            <div class="col-md-12">
+                 <p id="status" name="status" style="font-weight: bold; text-align: center; margin-bottom: 0;"> <%= STATUS %></p>
+            </div>
+
+            <!-- Linha 01 -->
+            <div class="row">
+                <div class="col-md-2">
+                    <label for="data_emissao" class="col-md-12 col-form-label text-md-right">Data de Emissão</label>
+                    <input type="text" readonly class="form-control" style="text-align: right" id="data_emissao" value="<%= data_emissao %>">
+                </div>                
+                <div class="col-md-2">
+                    <label for="prev_entrega" class="col-md-12 col-form-label text-md-right">Previsão</label>
+                    <input type="text" readonly class="form-control" style="text-align: right" id="prev_entrega" value="<%= prev_entrega %>">
+                </div>                
+                <div class="col-md-2">
+                    <label for="val_mercadoria" class="col-md-12 col-form-label text-md-right">R$ Mercadoria</label>
+                    <input type="text" readonly class="form-control" style="text-align: right" id="val_mercadoria" value="<%= val_mercadoria %>">
+                </div>                
+                <div class="col-md-2">
+                    <label for="val_frete" class="col-md-12 col-form-label text-md-right">R$ Frete</label>
+                    <input type="text" readonly class="form-control" style="text-align: right" id="val_frete" value="<%= val_frete %>">
+                </div>                
+                <div class="col-md-2">
+                    <label for="pesoM3" class="col-md-12 col-form-label text-md-right">Peso/M3</label>
+                    <input type="text" readonly class="form-control" style="text-align: right" id="pesoM3" value="<%= pesoM3 %>">
+                </div>                
+                <div class="col-md-2">
+                    <label for="tipoPeso" class="col-md-12 col-form-label text-md-right">Tipo/M3</label>
+                    <input type="text" readonly class="form-control" style="text-align: right" id="tipoPeso" value="<%= tipoPeso %>">
+                </div>                
+            </div>
+            <hr>
+
+            <!-- Linha 02 -->
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="chave_ctrc" class="col-md-12 col-form-label text-md-right">Chave CTRC</label>
+                    <input type="text" readonly class="form-control" id="chave_ctrc" style="text-align: right; font-size: 14px;" value="<%= chave_ctrc %>">
+                </div>                
+                <div class="col-md-4">
+                    <label for="origem_nome" class="col-md-12 col-form-label text-md-right">Origem</label>
+                    <input type="text" readonly class="form-control" id="origem_nome" style="text-align: right; font-size: 14px;" value="<%= origem_nome %>">
+                </div>                
+                <div class="col-md-2">
+                    <label for="origem_uf" class="col-md-12 col-form-label text-md-right">UF</label>
+                    <input type="text" readonly class="form-control" right" id="origem_uf" style="text-align: right; font-size: 14px;" value="<%= origem_uf %>">
+                </div>                
+                <div class="col-md-2">
+                    <label for="origem_ibge" class="col-md-12 col-form-label text-md-right">Nº IBGE</label>
+                    <input type="text" readonly class="form-control" id="origem_ibge" style="text-align: right; font-size: 14px;" value="<%= origem_ibge %>">
+                </div>                
+            </div>
+            <hr>
+
+            <!-- Linha 03 -->
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="chave_nfe" class="col-md-12 col-form-label text-md-right">Chave NFe</label>
+                    <input type="text" readonly class="form-control" id="chave_nfe" style="text-align: right; font-size: 14px;" value="<%= chave_nfe %>">
+                </div>                
+                <div class="col-md-2">
+                    <label for="nf_numero" class="col-md-12 col-form-label text-md-right">Nº Nota Fiscal</label>
+                    <input type="text" readonly class="form-control" id="nf_numero" style="text-align: right; font-size: 14px;" value="<%= nf_numero %>">
+                </div>                
+                <div class="col-md-1">
+                    <label for="nf_serie" class="col-md-12 col-form-label text-md-right">Série</label>
+                    <input type="text" readonly class="form-control" id="nf_serie" style="text-align: right; font-size: 14px;" value="<%= nf_serie %>">
+                </div>                
+                <div class="col-md-3">
+                    <label for="nf_emissao" class="col-md-12 col-form-label text-md-right">NF Emissão</label>
+                    <input type="text" readonly class="form-control" id="nf_emissao" style="text-align: right; font-size: 14px;" value="<%= nf_emissao %>">
+                </div>                
+                <div class="col-md-2">
+                    <label for="nf_valor" class="col-md-12 col-form-label text-md-right">R$ NF</label>
+                    <input type="text" readonly class="form-control" id="nf_valor" style="text-align: right; font-size: 14px;" value="<%= nf_valor %>">
+                </div>                
+            </div>
+            <hr>
+
+            <!-- Linha 04 -->
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="ud_nome" class="col-md-12 col-form-label text-md-right">Und. Destino</label>
+                    <input type="text" readonly class="form-control" id="ud_nome" style="text-align: right; font-size: 12px;" value="<%= ud_nome %>">
+                </div>                
+                <div class="col-md-4">
+                    <label for="ud_endereco" class="col-md-12 col-form-label text-md-right">Endereço</label>
+                    <input type="text" readonly class="form-control" id="ud_endereco" style="text-align: right; font-size: 12px;" value="<%= ud_endereco %>">
+                </div>                
+                <div class="col-md-2">
+                    <label for="ud_cidade" class="col-md-12 col-form-label text-md-right">Cidade</label>
+                    <input type="text" readonly class="form-control" id="ud_cidade" style="text-align: right; font-size: 12px;" value="<%= ud_cidade %>">
+                </div>                
+                <div class="col-md-2">
+                    <label for="ud_ibge" class="col-md-12 col-form-label text-md-right">Nº IBGE</label>
+                    <input type="text" readonly class="form-control" id="ud_ibge" style="text-align: right; font-size: 12px;" value="<%= ud_ibge %>">
+                </div>                
+            </div>
+            <hr>
+
+            <!-- Ocorrências -->
+            <div class="row">
+                <div class="col-md-1"><h5>Ocorrências:</h5></div>
+                <div class="col-md-11" id="itens"></div>
+            </div>
+            <hr>
+
+            <!-- Linha 05 -->
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="dp_nome" class="col-md-12 col-form-label text-md-right">Destino Prestação</label>
+                    <input type="text" readonly class="form-control" id="dp_nome" style="text-align: right; font-size: 14px;" value="<%= dp_nome %>">
+                </div>                
+                <div class="col-md-2">
+                    <label for="dp_uf" class="col-md-12 col-form-label text-md-right">UF</label>
+                    <input type="text" readonly class="form-control" id="dp_uf" style="text-align: right; font-size: 14px;" value="<%= dp_uf %>">
+                </div>                
+                <div class="col-md-2">
+                    <label for="dp_ibge" class="col-md-12 col-form-label text-md-right">Nº IBGE</label>
+                    <input type="text" readonly class="form-control" id="dp_ibge" style="text-align: right; font-size: 14px;" value="<%= dp_ibge %>">
+                </div>                
+                <div class="col-md-4">
+                    <label for="le_nome" class="col-md-12 col-form-label text-md-right">Destinatário</label>
+                    <input type="text" readonly class="form-control" id="le_nome" style="text-align: right; font-size: 14px;" value="<%= le_nome %>">
+                </div>                
+            </div>
+            <hr>
+
+            <!-- Linha 06 -->
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="le_endereco" class="col-md-12 col-form-label text-md-right">Endereço de entrega</label>
+                    <input type="text" readonly class="form-control" id="le_endereco" style="text-align: right; font-size: 14px;" value="<%= le_endereco %>">
+                </div>                
+                <div class="col-md-4">
+                    <label for="le_cidade" class="col-md-12 col-form-label text-md-right">Cidade</label>
+                    <input type="text" readonly class="form-control" id="le_cidade" style="text-align: right; font-size: 14px;" value="<%= le_cidade %>">
+                </div>                
+                <div class="col-md-2">
+                    <label for="le_ibge" class="col-md-12 col-form-label text-md-right">Nº IBGE</label>
+                    <input type="text" readonly class="form-control" id="le_ibge" style="text-align: right; font-size: 14px;" value="<%= le_ibge %>">
+                </div>                
+            </div>
+            <hr>
+
+
+        </div>
+    </main>
+
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+
+    <script>
+        let HTMLocorrencias = decodeURI('<%= HTMLocorrencias %>')
+        document.getElementById('itens').innerHTML = HTMLocorrencias
+    </script>
+    
+</body>
+</html>

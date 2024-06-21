@@ -1,0 +1,40 @@
+============== Fast Code =============
+.\gen.bat --table bancos2  --save  --no-show
+.\gen.bat --table tweets   --save  --no-show
+.\gen.bat --table tokens   --save  --no-show
+
+============== API ===================
+Métodos:
+GET:
+
+{tabela}
+: lista todos os dados da tabela
+
+{tabela}/types
+: mostra metadados da tabela 
+
+{tabela}/{id}
+: mostra dados referente ao ID 
+
+{tabela}?filter={condição}
+: Lista dados com base na CONDIÇÃO padrão "where SQL" - "filter" opcional
+
+{tabela}/page?page={pagina}&size={linhas}&filter={condição}
+: Lista dados com paginação PAGINA="pagina a ser mostrada",LINHAS="Quantidade de linhas",CONDIÇÃO="Filtro SQL"
+
+
+POST:
+{tabela}
+: Inclui dados (body) na tabela
+
+PUT:
+{tabela}/{id}
+: Altera todos os dados (body) na tabela para o ID
+
+PATCH:
+{tabela}/{id}
+: Altera dados (body) na tabela para o ID
+
+DELETE:
+{tabela}/{id}
+: Exclui registro na tabela do ID

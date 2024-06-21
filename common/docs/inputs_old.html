@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+
+  <!-- Runtracker Detalhes-->
+  <link rel="shortcut icon" href="/public/favicon.ico" />
+  <link rel="stylesheet" href="/public/menu.css">
+  <title>Runtracker - Cadastros</title>
+
+</head>
+
+<body>
+
+  <div id="mySidenav" class="sidenav">
+  </div>
+
+  <header>
+    <div class="container-fluid "
+      style="position: absolute; top: 0;width: 100%; height: 50px; background-color: #e3f2fd;">
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Cadastros</span>
+    </div>
+  </header>>
+
+  <main id="main" class="mx-0 my-0">
+
+    <div class="container" id="div_master" style="display:none">
+      <div class="jumbotron pb-2 pt-2 mb-1" style="margin-top: 2rem;">
+        <h1 id="title_tela" style="text-align: center; color: rgb(34, 27, 95);">Cadastro de Bancos</h1>
+
+        <div class="row">
+          <div class="col-md-6">
+            <label id="title_pesquisa" for="pesquisa" class="col-md-12 col-form-label text-md-left py-0">Filtro:</label>
+            <input type="text" class="form-control" style="text-align: left;" id="pesquisa" value="">
+          </div>
+        </div>
+
+        <div class="row"></div>
+
+        <div class="row mt-4">
+          <div class="col-md-2">
+            <button type="button" class="btn btn-outline-info btn-lg btn-block" id="btn_seek">Pesquisar</button>
+          </div>
+
+          <div class="col-md-2">
+            <button type="button" class="btn btn-outline-primary btn-lg btn-block " id="btn_novo">Novo</button>
+          </div>
+
+          <div class="col-md-2">
+            <button type="button" class="btn btn-outline-secondary btn-lg btn-block" id="btn_sair">Sair</button>
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+
+    <div class="container" id="div_tabela" style="display:none">
+      <table class="table table-sm table-hover mb-0 table-dark">
+        <thead>
+          <tr id="head_table">
+          </tr>
+        </thead>
+        <tbody id='body_table'>
+          <tr id="lines_table">
+          </tr>
+        </tbody>
+      </table>
+      <div id='div_paginate' class="row">
+        <div class="col-md-12">
+          <ul class="pagination pagination-sm justify-content-end mb-0">
+            <li class="page-item disabled"><span id="paginate_Regs" class="page-link mt-1">Regs: 10000</span></li>
+            <li class="page-item disabled"><span id="paginate_Pags" class="page-link mt-1">Pags: 10000</span></li>
+            <li class="page-item"><i id="paginate_Inicio" class="bi bi-skip-start-circle-fill px-0 mx-1 py-0 my-0" style="font-size: 1.6rem; color: rgb(42, 55, 80); cursor: pointer;"></i></li>
+            <li class="page-item"><i id="paginate_Anterior" class="bi bi-skip-backward-fill     px-0 mx-1 py-0 my-0" style="font-size: 1.6rem; color: rgb(42, 55, 80); cursor: pointer;"></i></li>
+            <li class="page-item disabled"><span id="paginate_Page" class="page-link mx-1 mt-1">999</span></li>
+            <li class="page-item"><i id="paginate_Proximo" class="bi bi-skip-forward-fill    px-0 mx-1 py-0 my-0" style="font-size: 1.6rem; color: rgb(42, 55, 80); cursor: pointer;"></i></li>
+            <li class="page-item"><i id="paginate_Ultimo" class="bi bi-skip-end-circle-fill px-0 mx-1 py-0 my-0" style="font-size: 1.6rem; color: rgb(42, 55, 80); cursor: pointer;"></i></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="container mb-2" id="div_tela" style="display:none">
+
+      <div class="row">
+        <div class="col-md-12">
+          <h5 id="text_acao_tela" style="text-align: center">Inclusão</h5>
+        </div>
+      </div>
+
+      <div id="div_tela_campos">
+      </div>
+
+      <div class="row mt-2">
+        <div class="col-md-8"></div>
+        <div class="col-md-2">
+          <button type="button" class="btn btn-outline-success btn-lg btn-block" id="btn_save">Gravar</button>
+        </div>
+        <div class="col-md-2">
+          <button type="button" class="btn btn-outline-danger btn-lg btn-block " id="btn_tela_cancel">Cancelar</button>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="container-fluid" style="width: 100%; height: 50px; background-color: #e3f2fd;">
+      <p class="text-center text-muted pt-2 mt-0">© Copyright 2021 Runtracker Sistemas. All rights reserved</p>
+    </div>
+  </footer>
+
+  <!-- Funções internas -->
+  <script type="text/javascript" src="input.js"></script>
+
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+      document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+      document.body.style.backgroundColor = "white";
+    }
+  </script>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
