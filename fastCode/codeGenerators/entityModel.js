@@ -38,7 +38,7 @@ let SHOW       = true
 let geraListaAPI
 
 process.stdout.write('\x1B[2J\x1B[0f')
-const titulo = '[Fast Code - By: Jurandir Ferreira]'.yellow.bgBlue.bold
+const titulo = '[Fast Code - By: João Victor Maia]'.yellow.bgBlue.bold
 console.log(titulo)
 
 const entityModel = (params) => {
